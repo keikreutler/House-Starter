@@ -12,6 +12,8 @@
 
   <title>House-Starter</title>
 
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+
   <!-- Custom Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -22,6 +24,9 @@
   <!-- Leaflet core CSS -->
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
   <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
+
+  <!-- Firebase -->
+  <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
 
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="css/style.css" />
@@ -58,10 +63,10 @@
   <div id="map"></div>
 
   <div>
-    LAT:<input type="text" id="lat">
-    LONG:<input type="text" id="long">
-    POPUP:<input type="text" id="popuptext" value="POPUPTEXT">
-    <button class="btn btn-primary btn-md" onclick="createPoint()">Create Point</button>
+    Name <input type="text" id="name">
+    Interest level <input type="text" id="category">
+    Description <input type="text" id="description" value="">
+    <button id="add-location" class="btn btn-primary btn-md" onclick="onLocation()">Create Point</button>
   </div>
 
   <!-- Map Init -->
