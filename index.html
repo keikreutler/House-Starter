@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="/assets/images/favicon_16x16.ico">
+
+  <!--[if IE]> <link rel="shortcut icon" href="assets/images/favicon_16x16.ico">[endif]-->
+
+  <title>House-Starter</title>
+
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Leaflet core CSS -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/map.css" />
+
+  <!-- JavaScript -->
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
+
+<!--  <script>
+    function createPoint() {
+    var lat = document.getElementById("lat").value;
+    var long = document.getElementById("long").value;
+    var pop = document.getElementById("popuptext").value;
+    var latint = parseInt(lat);
+    var longint = parseInt(long);
+    var mora = new L.LatLng(latint, longint),
+    MSD = new L.Marker(mora);
+    map.addLayer(MSD);
+    MSD.bindPopup(pop);
+  }
+</script>-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+  <div id="map"></div>
+
+  <div>
+    LAT:<input type="text" id="lat">
+    LONG:<input type="text" id="long">
+    POPUP:<input type="text" id="popuptext" value="POPUPTEXT">
+    <button class="btn btn-primary btn-md" onclick="createPoint()">Create Point</button>
+  </div>
+
+  <!-- Map Init -->
+  <script src="js/map.js"></script>
+</body>
+</html>
