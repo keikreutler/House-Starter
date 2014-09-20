@@ -22,6 +22,7 @@ marker.on('dragend', function(e) {
     marker.openPopup();
 });
 
+// Add submitted location to database
 function onLocation() {
   // First, clean the potential-HTML they've added to the value.
   var category = L.DomUtil.get('category').value;
@@ -41,3 +42,23 @@ function onLocation() {
   // Reset the original marker
   marker.setLatLng([40.68988017892701, 16.524295806884766]);
 };
+
+// Display all geojson points in database
+base.on('value', function(snapshot) {
+    features = [];
+    for (var k in snapshot.val()) {
+      features.push(snapshot.val()[k]);
+    }
+    baseLayer = L.mapbox.featureLayer(features);
+    // And for each new marker, add a featureLayer
+    //L.mapbox.featureLayer(features)
+        baseLayer.eachLayer(function(l) {
+            // Which positions markers below the marker you drag, so that
+            // they don't overlap in the z-index
+            l.setZIndexOffset(-500);
+            // And each marker should have a label with its title.
+            var geojson = l.toGeoJSON();
+              l.bindPopup('<h2>'+ geojson.properties['name'] +'</h2><p> '+ geojson.properties.description +'</p>');
+        })
+        .addTo(map);
+});

@@ -1,3 +1,7 @@
 #map {
-  height: 400px;
+  height: 300px;
+}
+
+.custom-map .leaflet-popup-content {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
