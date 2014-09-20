@@ -1,7 +1,19 @@
 #map {
-  height: 300px;
+  float:left;
+  width: 75%;
+  height: 600px;
+  margin: auto;
+}
+
+#location-form {
+  padding: 25px;
 }
 
 .custom-map .leaflet-popup-content {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.marker-title {
+  font-size: 18px;
+  font-weight: bold;
 }

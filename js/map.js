@@ -16,6 +16,9 @@ var marker = L.marker([40.68988017892701, 16.524295806884766], {
     .addTo(map)
     .bindPopup('Click or drag to add location');
 
+var colors = ['#758AC4', '#997453', '#CCB850', '#E5AE7D'];
+
+
 marker.openPopup();
 
 marker.on('dragend', function(e) {
@@ -29,7 +32,7 @@ function onLocation() {
   // Get the current draggable marker's position and GeoJSON representation
   var geojson = marker.toGeoJSON();
   geojson.properties['category'] = category;
-  // geojson.properties['marker-color'] = colors[category];
+  geojson.properties['marker-color'] = colors[category];
   // geojson.properties['marker-symbol'] = icons[category];
   geojson.properties['name'] = L.DomUtil.get('name').value;
   geojson.properties['description'] = L.DomUtil.get('description').value;
@@ -58,7 +61,7 @@ base.on('value', function(snapshot) {
             l.setZIndexOffset(-500);
             // And each marker should have a label with its title.
             var geojson = l.toGeoJSON();
-              l.bindPopup('<h2>'+ geojson.properties['name'] +'</h2><p> '+ geojson.properties.description +'</p>');
+              l.bindPopup('<p class="marker-title">'+ geojson.properties['name'] +'</p><p class="marker-description"> '+ geojson.properties.description +'</p>');
         })
         .addTo(map);
 });

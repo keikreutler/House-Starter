@@ -36,20 +36,6 @@
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
 
-<!--  <script>
-    function createPoint() {
-    var lat = document.getElementById("lat").value;
-    var long = document.getElementById("long").value;
-    var pop = document.getElementById("popuptext").value;
-    var latint = parseInt(lat);
-    var longint = parseInt(long);
-    var mora = new L.LatLng(latint, longint),
-    MSD = new L.Marker(mora);
-    map.addLayer(MSD);
-    MSD.bindPopup(pop);
-  }
-</script>-->
-
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -62,11 +48,26 @@
 
   <div id="map" class="custom-map"></div>
 
-  <div>
-    Name <input type="text" id="name">
-    Interest level <input type="text" id="category">
-    Description <input type="text" id="description" value="">
-    <button id="add-location" class="btn btn-primary btn-md" onclick="onLocation()">Create Point</button>
+  <div id="location-form">
+    <p>
+      Name<br>
+      <input type="text" id="name">
+    </p>
+    <p>
+      Interest Level<br>
+      <select id="category">
+        <option value="0">I'm traveling here</option>
+        <option value="1">I want to travel here</option>
+        <option value="2">I live here</option>
+      </select>
+    </p>
+    <p>
+      Description
+      <br><input type="text" id="description" value="">
+    </p>
+    <p>
+      <button id="add-location" class="btn btn-primary btn-md" onclick="onLocation()">Add Destination</button>
+    </p>
   </div>
 
   <!-- Map Init -->
