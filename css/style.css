@@ -1,0 +1,108 @@
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-instructions {
+  font-size:12px;
+  color: #888;
+  font-style: italic;
+  padding: 10px 0;
+}
+
+.form-conversation {
+  margin: 10px 0;
+}
+
+.form-location {
+  font-size:12px;
+  color: #888;
+  font-style: italic;
+}
+
+.modal-header {
+  padding-bottom: 0;
+}
+.modal-body {
+  padding-top: 25px;
+}
+.modal-footer {
+  text-align: left;
+}
+
+
+.about {
+  background: #EEE;
+  z-index: -5000;
+
+}
+.about .glyphicon {
+  font-size: 70px;
+  padding: 50px;
+}
+
+.about .col-md-4 {
+  padding: 0 50px;
+}
+
+.community h2 {
+  margin: 0 0 25px 0;
+}
+.add-destination {
+  margin: 50px 0;
+}
+
+section {
+  padding: 75px 0;
+}
+@media (min-width: 768px) {
+  .navbar-fixed-top {
+    padding: 10px 0;
+  }
+  .navbar-fixed-top .navbar-brand {
+    font-size: 2em;
+    font-weight: 700;
+  }
+  .navbar-fixed-top.navbar-shrink {
+    padding: 10px 0;
+  }
+  .navbar-fixed-top.navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+  }
+}
+.navbar {
+  font-weight: 500;
+}
+.navbar a:focus {
+  outline: none;
+}
+.navbar .navbar-nav {
+  letter-spacing: 1px;
+}
+.navbar .navbar-nav li a:focus {
+  outline: none;
+}
+.navbar-default,
+.navbar-inverse {
+  border: none;
+  background-color: #ffffff;
+  color: #89b63c;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  color: white;
+}
+footer h3 {
+  margin-bottom: 30px;
+}
+footer .footer-above {
+  padding-top: 50px;
+  background-color: #EEE;
+}
+footer .footer-col {
+  margin-bottom: 50px;
+}
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #CCC;
+}

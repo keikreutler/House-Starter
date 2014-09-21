@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Kei Kreutler">
+
+  <!--[if IE]> <link rel="shortcut icon" href="assets/images/favicon_16x16.ico">[endif]-->
+
+  <title>houseStarter</title>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <!-- Bootstrap core CSS -->
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Leaflet core CSS -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css' rel='stylesheet' />
+
+  <!-- Firebase -->
+  <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/map.css" />
+
+  <!-- JavaScript -->
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.js'></script>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#page-top">
+          houseStarter
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right list-inline page-scroll">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a href="#destinations">Destinations</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#community">Community</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Beginning of Map Section -->
+  <div id="destinations">
+    <div id="map" class="custom-map">
+      <div id="map-legend">
+        <i class="glyphicon glyphicon-home" style="color: #758AC4"></i> I'm traveling here<br>
+        <i class="glyphicon glyphicon-home" style="color: #997453"></i> I want to travel here<br>
+        <i class="glyphicon glyphicon-home" style="color: #CCB850"></i> I live here<br>
+      </div>
+    </div>
+    <div class="text-center add-destination">
+      <h3>
+        <a href="#addDestination" class="btn btn-lg btn-primary" data-toggle="modal">Add Destination</a>
+      </h3>
+    </div>
+  </div>
+
+
+  <!-- Beginning of About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <span class="glyphicon glyphicon-road"></span>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <span class="glyphicon glyphicon-globe"></span>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <span class="glyphicon glyphicon-gift"></span>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beginning of Community Section -->
+  <section id="community" class="community">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 text-center">
+          <h2>Building Community</h2>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae.</p>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <p>Twitter widget with hastag (Twitter widgets currently down)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            Creative Commons Zero v1.0
+            <br><a href="https://github.com/keikreutler/House-Starter" target="blank">Fork on Github</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Add Destination modal -->
+  <div id="addDestination" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h2 class="modal-title">Add Destination</h2>
+          <p class="form-location">Place the map marker to specify location.</p>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Location name">
+            <p class="form-instructions">The name of the city, neighborhood, or initiative you're looking to visit. Choose the actual location on the map.</p>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">@</div>
+              <input class="form-control" type="text" id="twitter" placeholder="Twitter handle">
+            </div>
+          </div>
+          <div class="form-group">
+            <select id="category">
+              <option value="0">I'm traveling here</option>
+              <option value="1">I want to travel here</option>
+              <option value="2">I live here</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea type="text" rows="3" class="form-control" id="description" placeholder="Additional information"></textarea>
+            <p class="form-instructions">Further details about your visit.</p>
+          </div>
+          <button type="submit" data-dismiss="modal" class="btn btn-default" onclick="onLocation()">Submit</button>
+        </div>
+        <div class="modal-footer">
+          <p class="form-conversation">
+            Use the hashtag <a href="https://twitter.com/hashtag/housestarter?f=realtime" target="_blank">#housestarter</a> on Twitter to connect with other users and continue the conversation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Init -->
+    <script src="js/map.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/freelancer.js"></script>
+
+  </body>
+  </html>
